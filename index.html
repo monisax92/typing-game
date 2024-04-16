@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="https://www.google.com/s2/favicons?domain=exercism.org">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <link rel="stylesheet" href="./style.css">
+    <title>Typing game</title>
+</head>
+
+<body>
+    <button id="settings-btn" class="settings-btn">
+        <i class="fas fa-cog"></i>
+    </button>
+
+    <div class="settings" id="settings">
+        <form id="settings-form">
+            <div>
+                <label for="difficulty">Difficulty level</label>
+                <select id="difficulty">
+                    <option value="easy">Easy</option>
+                    <option value="medium">Medium</option>
+                    <option value="hard">Hard</option>
+                </select>
+            </div>
+        </form>
+    </div>
+
+    <div class="game-container">
+        <h2>Check your typing speed</h2>
+        <small>Type the following word</small>
+
+        <h1 id="word"></h1>
+
+        <input type="text" id="text-input" autocomplete="off" placeholder="Type here">
+
+        <p class="time-container">
+            Time left: <span id="timeLeft">10</span>s
+        </p>
+
+        <p class="score-container">
+            Score: <span id="score">0</span>
+        </p>
+
+
+        <div id="game-over-container" class="game-over-container"></div>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+
+</html>
